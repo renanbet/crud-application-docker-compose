@@ -30,7 +30,7 @@ initdb.sql
 chmod 777 cli.sh
 ```
 
-- Executar o seguinte comando que irá instalar o client e server
+- Instalar o client e server
 ```
 ./cli.sh setup
 ```
