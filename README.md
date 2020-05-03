@@ -41,7 +41,7 @@ sudo make up
 ```
 ou
 ```
-docker-compose up -d
+sudo docker-compose up -d
 ```
 
 ## Logs
@@ -52,18 +52,18 @@ sudo make logs
 ```
 ou
 ```
-docker-compose logs -f
+sudo docker-compose logs -f
 ```
 
 ## Logs de testes
 
 - client
 ```
-docker-compose logs -f medical-procedures-clienttest
+sudo docker-compose logs -f medical-procedures-clienttest
 ```
 
 - server
 ```
-docker-compose logs -f medical-procedures-apitest
+sudo docker-compose logs -f medical-procedures-apitest
 ```
 
