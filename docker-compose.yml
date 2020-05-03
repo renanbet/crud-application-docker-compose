@@ -21,7 +21,7 @@ services:
     container_name: medical-procedures-client
     build: "./medical-procedures-client"
     volumes:
-      - ./medical-procedures-client:/app
+      - ./medical-procedures-client:/home/app
     ports:
       - 8080:80
     environment:
@@ -34,7 +34,7 @@ services:
       context: "./medical-procedures-client"
       dockerfile: "dockerfile-test"
     volumes:
-      - ./medical-procedures-client:/app
+      - ./medical-procedures-client:/home/app
     environment:
       API_URL: http://localhost:3000
   apitest:
