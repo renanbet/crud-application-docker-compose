@@ -11,7 +11,14 @@ then
       do
         git clone "https://github.com/renanbet/$Project.git"
       done
-elif [ "$1" = "update" ]
+
+    arquivo=".env"
+
+    while IFS== read var1 var2; do
+        echo $var1 '-' $var2
+        sed -i "s/#$var1/$var2/" docker-compose.yml
+    done < "$arquivo"
+elif [ "$1" = "pull" ]
 then
     for Project in "${Projects[@]}"
       do
