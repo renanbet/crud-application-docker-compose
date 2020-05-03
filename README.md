@@ -15,9 +15,9 @@ git clone https://github.com/renanbet/medical-procedures-compose.git
 ```
 
 
-- Configurar os valores de ambiente no arquivo .env
+- Configurar os valores de ambiente no arquivo config.env
 ```
-.env
+config.env
 ```
 
 - Rodar o script initdb.sql nos bancos do app e teste

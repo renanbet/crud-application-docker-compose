@@ -12,7 +12,7 @@ then
         git clone "https://github.com/renanbet/$Project.git"
       done
 
-    arquivo=".env"
+    arquivo="config.env"
 
     while IFS== read var1 var2; do
         echo $var1 '-' $var2
