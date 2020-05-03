@@ -44,6 +44,16 @@ ou
 sudo docker-compose up -d
 ```
 
+## Acessar a aplicação
+
+```
+http://localhost:8080
+```
+- login: admin - senha: admin
+
+- login: user - senha: user
+
+
 ## Logs
 
 - Para ver todos os logs
@@ -67,3 +77,12 @@ sudo docker-compose logs -f medical-procedures-clienttest
 sudo docker-compose logs -f medical-procedures-apitest
 ```
 
+## Desligar aplicações
+
+```
+sudo make down
+```
+ou
+```
+docker-compose down
+```
