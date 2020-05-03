@@ -4,7 +4,7 @@
 
 - git
 - docker
-- docker compose
+- docker-compose
 
 
 ## Ambiente linux
@@ -12,6 +12,7 @@
 - Clonar o repositório
 ```
 git clone https://github.com/renanbet/medical-procedures-compose.git
+git checkout master
 ```
 
 
