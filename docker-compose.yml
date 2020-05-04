@@ -26,28 +26,3 @@ services:
       - 8080:80
     environment:
       API_URL: http://localhost:3000
-  clienttest:
-    container_name: medical-procedures-clienttest
-    build:
-      context: "./medical-procedures-client"
-      dockerfile: "dockerfile-test"
-    volumes:
-      - ./medical-procedures-client:/home/app
-    environment:
-      API_URL: http://localhost:3000
-  apitest:
-    container_name: medical-procedures-apitest
-    build: 
-      context: "./medical-procedures-server"
-      dockerfile: "dockerfile-test"
-    volumes:
-      - ./medical-procedures-server:/home/app
-    environment:
-      SECRET: mysecretkey
-      TOKEN_EXP: 3600000
-      TOKEN_EXP_REFRESH: 120
-      TIMEZONE: America/Sao_Paulo
-      DB_HOST: #TEST_HOST
-      DB_DATABASE: #TEST_DATABASE
-      DB_USER: #TEST_USER
-      DB_PASS: #TEST_PASS
