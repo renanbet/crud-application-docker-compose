@@ -1,4 +1,7 @@
 # medical-procedures-compose
+Aplicação que cria o ambiente em docker das aplicações:
+- server: https://github.com/renanbet/medical-procedures-server
+- client: https://github.com/renanbet/medical-procedures-client
 
 ## Pré-requisitos
 
