@@ -26,8 +26,6 @@ services:
       - 8080:80
     environment:
       API_URL: http://localhost:3000
-    depends_on:
-      - api
   clienttest:
     container_name: medical-procedures-clienttest
     build:

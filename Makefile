@@ -12,3 +12,8 @@ down:
 
 logs:
 	docker-compose logs -f
+
+.PHONY: build
+
+build:
+	docker-compose build --no-cache
