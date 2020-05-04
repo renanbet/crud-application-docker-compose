@@ -66,19 +66,7 @@ ou
 sudo docker-compose logs -f
 ```
 
-## Logs de testes
-
-- client
-```
-sudo docker-compose logs -f medical-procedures-clienttest
-```
-
-- server
-```
-sudo docker-compose logs -f medical-procedures-apitest
-```
-
-## Desligar aplicações
+## Parar aplicações
 
 ```
 sudo make down
