@@ -48,7 +48,7 @@ ou
 sudo docker-compose up -d
 ```
 
-- Buildar os ambientes
+- Buildar os ambientes (na primeira vez do up já é buildado)
 ```
 sudo make build
 ```
