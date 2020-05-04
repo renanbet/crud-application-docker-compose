@@ -87,3 +87,10 @@ ou
 ```
 sudo docker-compose down
 ```
+
+## Testes
+```
+cd tests
+sudo make up
+sudo make logs
+```
