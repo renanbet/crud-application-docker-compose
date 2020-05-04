@@ -7,7 +7,7 @@ Aplicação que cria o ambiente em docker das aplicações:
 
 - git
 - docker
-- docker-compose
+- docker-compose 3.7
 
 
 ## Ambiente linux
@@ -48,6 +48,11 @@ ou
 sudo docker-compose up -d
 ```
 
+- Buildar os ambientes
+```
+sudo make build
+```
+
 ## Acessar a aplicação
 
 ```
@@ -69,12 +74,12 @@ ou
 sudo docker-compose logs -f
 ```
 
-## Parar aplicações
+## Para parar aplicações
 
 ```
 sudo make down
 ```
 ou
 ```
-docker-compose down
+sudo docker-compose down
 ```
