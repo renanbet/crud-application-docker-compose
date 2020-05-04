@@ -3,3 +3,4 @@ medical-procedures-server
 tests/medical-procedures-client
 tests/medical-procedures-server
 .env-prod
+config.env
