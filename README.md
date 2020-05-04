@@ -52,6 +52,10 @@ sudo docker-compose up -d
 ```
 sudo make build
 ```
+ou
+```
+sudo docker-compose build --no-cache
+```
 
 ## Acessar a aplicação
 
