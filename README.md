@@ -41,20 +41,20 @@ chmod 777 cli.sh
 
 - Subir os ambientes
 ```
-sudo make up
+make up
 ```
 ou
 ```
-sudo docker-compose up -d
+docker-compose up -d
 ```
 
 - Buildar os ambientes (na primeira vez do up já é buildado)
 ```
-sudo make build
+make build
 ```
 ou
 ```
-sudo docker-compose build --no-cache
+docker-compose build --no-cache
 ```
 
 ## Acessar a aplicação
@@ -71,26 +71,26 @@ http://localhost:8080
 
 - Para ver todos os logs
 ```
-sudo make logs
+make logs
 ```
 ou
 ```
-sudo docker-compose logs -f
+docker-compose logs -f
 ```
 
 ## Para parar aplicações
 
 ```
-sudo make down
+make down
 ```
 ou
 ```
-sudo docker-compose down
+docker-compose down
 ```
 
 ## Testes
 ```
 cd tests
-sudo make up
-sudo make logs
+make up
+make logs
 ```
