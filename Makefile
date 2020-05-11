@@ -17,3 +17,18 @@ logs:
 
 build:
 	docker-compose build --no-cache
+
+.PHONY: setup
+
+setup:
+	./cli.sh setup
+
+.PHONY: pull
+
+pull:
+	./cli.sh pull
+
+.PHONY: env
+
+env:
+	./cli.sh env
