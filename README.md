@@ -40,7 +40,7 @@ chmod +x cli.sh
 ./cli.sh setup
 ```
 
-- Up services
+- Services up
 ```
 make up
 ```
@@ -49,7 +49,7 @@ or
 docker-compose up -d
 ```
 
-- Service build (not necessary on first time of compose up)
+- Build service (not necessary on first time of compose up)
 ```
 make build
 ```
@@ -58,7 +58,7 @@ or
 docker-compose build --no-cache
 ```
 
-## Access application 
+## Application access
 
 ```
 http://localhost:8080
@@ -79,7 +79,7 @@ or
 docker-compose logs -f
 ```
 
-## Stop services
+## Services stop
 
 ```
 make down
