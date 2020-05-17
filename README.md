@@ -1,94 +1,95 @@
-# medical-procedures-compose
-Aplicação que cria o ambiente em docker das aplicações:
+# Medical procedures compose
+
+Docker applciation to build and up:
 - server: https://github.com/renanbet/medical-procedures-server
 - client: https://github.com/renanbet/medical-procedures-client
 
-## Pré-requisitos
+## Requirements
 
 - git
 - docker
 - docker-compose 3.7
 
 
-## Ambiente linux
+## Linux enviroment
 
-- Clonar o repositório
+- Clone the repository
 ```
 git clone https://github.com/renanbet/medical-procedures-compose.git
 git checkout master
 ```
 
 
-- Configurar os valores de ambiente no arquivo config.env
+- Set the enviroment variables on
 ```
 config.env
 ```
 
-- Rodar o script initdb.sql nos bancos do app e teste
+- Run initdb.sql script on db
 ```
 initdb.sql
 ```
 
-- Atribuir permissão de execução para o cli.sh
+- Add execution permission on cli.sh
 ```
-chmod 777 cli.sh
+chmod +x cli.sh
 ```
 
-- Instalar o client e server
+- Install the client and server
 ```
 ./cli.sh setup
 ```
 
-- Subir os ambientes
+- Up services
 ```
 make up
 ```
-ou
+or
 ```
 docker-compose up -d
 ```
 
-- Buildar os ambientes (na primeira vez do up já é buildado)
+- Service build (not necessary on first time of compose up)
 ```
 make build
 ```
-ou
+or
 ```
 docker-compose build --no-cache
 ```
 
-## Acessar a aplicação
+## Access application 
 
 ```
 http://localhost:8080
 ```
-- login: admin - senha: admin
+- login: admin - password: admin
 
-- login: user - senha: user
+- login: user - password: user
 
 
 ## Logs
 
-- Para ver todos os logs
+- Show Logs
 ```
 make logs
 ```
-ou
+or
 ```
 docker-compose logs -f
 ```
 
-## Para parar aplicações
+## Stop services
 
 ```
 make down
 ```
-ou
+or
 ```
 docker-compose down
 ```
 
-## Testes
+## Tests
 ```
 cd tests
 make up
