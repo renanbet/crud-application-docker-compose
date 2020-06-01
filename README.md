@@ -2,7 +2,7 @@
 
 Docker applciation to build and up:
 - server: https://github.com/renanbet/medical-procedures-server
-- client: https://github.com/renanbet/angular-crud-client
+- client: https://github.com/renanbet/medical-procedures-client
 
 ## Requirements
 
