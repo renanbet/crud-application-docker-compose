@@ -71,7 +71,8 @@ docker-compose build --no-cache
 ## Application access
 
 ```
-http://localhost:8080
+FRONT http://localhost:8080
+API http://localhost:3000
 ```
 
 - login: admin - password: admin
