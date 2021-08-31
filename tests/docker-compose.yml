@@ -1,15 +1,15 @@
-version: "3.7"
+version: "3.8"
 services:
-  clienttest:
+  medicalclienttest:
     container_name: medical-procedures-clienttest
     build:
       context: "./medical-procedures-client"
       dockerfile: "dockerfile-test"
     environment:
       API_URL: http://localhost:3000
-  apitest:
+  medicalapitest:
     container_name: medical-procedures-apitest
-    build: 
+    build:
       context: "./medical-procedures-server"
       dockerfile: "dockerfile-test"
     environment:
@@ -17,7 +17,27 @@ services:
       TOKEN_EXP: 3600000
       TOKEN_EXP_REFRESH: 120
       TIMEZONE: America/Sao_Paulo
-      DB_HOST: #TEST_HOST
-      DB_DATABASE: #TEST_DATABASE
-      DB_USER: #TEST_USER
-      DB_PASS: #TEST_PASS
+      DB_HOST: medicaldbtest
+      DB_DATABASE: medical
+      DB_USER: root
+      DB_PASS: example
+    depends_on:
+      - "medicaldbtest"
+  medicaldbtest:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+  medicaladminertest:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+  medicalclienttest:
+    container_name: medical-procedures-client
+    build: "./medical-procedures-client"
+    ports:
+      - 8080:80
+    environment:
+      API_URL: http://localhost:3000

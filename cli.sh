@@ -10,17 +10,13 @@ then
     for Project in "${Projects[@]}"
       do
         git clone "https://github.com/renanbet/$Project.git"
+        mkdir database
+        mkdir tests
         cd tests
         git clone "https://github.com/renanbet/$Project.git"
+        mkdir database
         cd ..
       done
-
-    arquivo="config.env"
-
-    while IFS== read var1 var2; do
-        sed -i "s/#$var1/$var2/" docker-compose.yml
-        sed -i "s/#$var1/$var2/" tests/docker-compose.yml
-    done < "$arquivo"
 elif [ "$1" = "pull" ]
 then
     for Project in "${Projects[@]}"
@@ -28,5 +24,8 @@ then
         cd $Project
         git pull origin $2
         cd ..
+        cd tests/$Project
+        git pull origin $2
+        cd ../..
       done
 fi
